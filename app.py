@@ -7,6 +7,14 @@ from PIL import Image
 # --- Page Configuration ---
 st.set_page_config(page_title="TruthShield X - AI Fraud Detector", page_icon="🛡️", layout="wide", initial_sidebar_state="expanded")
 
+# --- Vercel Speed Insights ---
+st.markdown("""
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+""", unsafe_allow_html=True)
+
 # --- Advanced Cyber Theme ---
 st.markdown("""
     <style>
