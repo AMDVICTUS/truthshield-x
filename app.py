@@ -7,6 +7,16 @@ from PIL import Image
 # --- Page Configuration ---
 st.set_page_config(page_title="TruthShield X - AI Fraud Detector", page_icon="🛡️", layout="wide", initial_sidebar_state="expanded")
 
+# --- Vercel Web Analytics ---
+# Inject Vercel Analytics script for page view tracking
+vercel_analytics_script = """
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+"""
+st.components.v1.html(vercel_analytics_script, height=0)
+
 # --- Advanced Cyber Theme ---
 st.markdown("""
     <style>
